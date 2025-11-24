@@ -1,0 +1,165 @@
+
+Descrição Lógica do Funcionamento do Site Hospitalar
+
+O sistema hospitalar é uma aplicação web que permite gerenciar pacientes, médicos, atendimentos, agendamentos e setores internos do hospital. Seu objetivo é centralizar informações, facilitar processos administrativos e oferecer uma navegação simples e segura para usuários internos e externos.
+
+ 1- Estrutura Geral do Sistema
+
+O site é dividido em módulos principais, cada um responsável por um conjunto de funcionalidades específicas:
+
+Módulo de Pacientes
+
+Módulo de Médicos
+
+Módulo de Agendamentos / Consultas
+
+Módulo Administrativo
+
+Módulo de Autenticação (Login e Perfis)
+
+Cada módulo se comunica com o banco de dados através de operações CRUD (Criar, Ler, Atualizar e Deletar).
+
+ 2- Fluxo Lógico do Usuário
+2.1 Visitante (usuário sem login)
+
+Acessa a página inicial
+
+Visualiza informações básicas: serviços, unidades, horários e contatos
+
+Pode preencher formulários de pré-cadastro ou contato
+
+2.2 Usuário Autenticado
+
+Dependendo do perfil:
+
+Paciente
+
+Visualiza dados pessoais
+
+Agenda consultas
+
+Acompanha consultas marcadas
+
+Visualiza histórico de atendimentos
+
+Acessa resultados (exames, relatórios, prescrições – opcional)
+
+Médico
+
+Acessa agenda de atendimentos
+
+Visualiza lista de pacientes do dia
+
+Registra prontuários
+
+Atualiza informações clínicas
+
+Emite pedidos (exames, encaminhamentos)
+
+Administrador
+
+
+Gerencia cadastros (pacientes, médicos, setores)
+
+Controla horários disponíveis na agenda
+
+Controla permissões do sistema
+
+Gera relatórios administrativos
+
+🔹 3. Funcionalidades Principais (Regra de Negócio)
+3.1 Cadastro de Pacientes
+
+Deve conter dados básicos (nome, CPF, data de nascimento, contato)
+
+Cada paciente recebe um ID único
+
+Verifica existência de CPF para evitar duplicidade
+
+3.2 Cadastro de Médicos
+
+Inclui nome, especialidade, CRM, horário de trabalho
+
+Cada médico é vinculado a um ou mais setores
+
+Deve permitir verificação da validade do CRM
+
+3.3 Agendamento de Consultas
+
+Paciente escolhe especialidade → médico → data → horário
+
+O sistema valida:
+
+Disponibilidade do horário
+
+Limite diário do médico
+
+Conflitos de agenda
+
+Após confirmar:
+
+O agendamento é salvo
+
+Paciente e médico são notificados
+
+3.4 Prontuário Eletrônico
+
+Médico registra informações clínicas
+
+O paciente não pode editar, apenas visualizar
+
+Histórico fica vinculado permanentemente ao paciente
+
+3.5 Atendimento Ambulatorial
+
+Registra triagem
+
+Registra motivo da consulta
+
+Envia paciente para atendimento médico
+
+Gera dados para relatórios gerenciais
+
+
+ 4. Relacionamentos
+
+Um paciente pode ter várias consultas
+
+Um médico pode atender várias consultas
+
+Cada consulta pode gerar um prontuário
+
+Um setor pode ter vários médicos
+
+ 5. Segurança do Sistema
+
+Login com senha criptografada
+
+Logs de atividades críticas
+
+Ocultação de dados sensíveis
+
+Proteção contra consultas duplicadas e acessos indevidos
+
+ 6. Navegação e Interface
+
+Menu principal dividido por módulos
+
+Telas simples e responsivas
+
+Páginas diferenciadas para paciente, médico e administrador
+
+Painel de controle para cada tipo de usuário
+
+🔹 7. Objetivo Final
+
+O site hospitalar busca:
+
+✔ Organizar informações
+✔ Evitar erros e duplicidades
+✔ Acelerar processos de atendimento
+✔ Facilitar a comunicação entre médicos e pacientes
+✔ Centralizar e proteger dados clínicos
+
+
+
