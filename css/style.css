@@ -1,0 +1,326 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: #d9f0f3;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------------- HEADER ---------------- */
+
+header {
+    background-color: #ffffff;
+    border-bottom: 2px solid #aee0e6;
+    padding: 15px 0;
+    width: 100%;
+}
+
+.header-top {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #2b8a3e;
+    font-weight: 700;
+}
+
+.nav-principal a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-principal a:hover {
+    color: #2b8a3e;
+    text-decoration: underline;
+}
+
+/* ---------------- MAIN ---------------- */
+
+main {
+    width: 70%;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+}
+
+main h2, main h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #2b8a3e;
+}
+
+main p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+/* ---------------- FOOTER ---------------- */
+
+footer {
+    background-color: #2b8a3e;
+    color: white;
+    padding: 30px 0;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.footer-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-item {
+    width: 28%;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-item h3 {
+    margin-bottom: 12px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.footer-item p {
+    margin: 5px 0;
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+.footer-item a {
+    color: #e6ffe6;
+    text-decoration: none;
+}
+
+.footer-item a:hover {
+    text-decoration: underline;
+}
+
+/* ---------------- ESPECIALIDADES ---------------- */
+
+.especialidades-container {
+    padding: 40px;
+    text-align: center;
+    background-color: #d7eff5;
+}
+
+.especialidades-container h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #0e6e38;
+}
+
+.especialidades-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 20px;
+}
+
+.especialidade-item {
+    background-color: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.especialidade-item:hover {
+    transform: scale(1.05);
+}
+
+.especialidade-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.especialidade-item p {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* ---------------- CONVÊNIOS (NOVO) ---------------- */
+
+.convenios-container {
+    padding: 40px;
+    text-align: center;
+    background-color: #d7eff5;
+}
+
+.convenios-container h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #0e6e38;
+}
+
+.convenios-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 20px;
+}
+
+.convenio-item {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.convenio-item:hover {
+    transform: scale(1.06);
+}
+
+.convenio-item img {
+    width: 100%;
+    height: 140px;
+    object-fit: contain;
+}
+
+.convenio-item p {
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* ---------------- ALERTAS ---------------- */
+
+.alert {
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 70%;
+    margin: 15px auto;
+    text-align: center;
+}
+
+.alert-success {
+    background: #d4edda;
+    color: #155724;
+    border-left: 6px solid #28a745;
+}
+
+.alert-error {
+    background: #f8d7da;
+    color: #721c24;
+    border-left: 6px solid #dc3545;
+}
+
+/* ---------------- TABELA PACIENTES ---------------- */
+
+.tabela-pacientes {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tabela-pacientes th {
+    background: #2c7a7b;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.tabela-pacientes td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    font-size: 15px;
+}
+
+.tabela-pacientes tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* ---------------- BOTÕES ---------------- */
+
+.btn-edit {
+    color: #0066cc;
+    font-weight: bold;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.btn-edit:hover {
+    text-decoration: underline;
+}
+
+.btn-delete {
+    color: #cc0000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn-delete:hover {
+    text-decoration: underline;
+}
+
+/* ---------------- RESPONSIVIDADE ---------------- */
+
+@media (max-width: 900px) {
+    .especialidades-grid,
+    .convenios-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    main {
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    .especialidades-grid,
+    .convenios-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* ---------------- CARDS ---------------- */
+
+.card {
+    border-radius: 15px;
+    background: #ffffff;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
