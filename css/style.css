@@ -14,7 +14,7 @@ body {
     flex-direction: column;
 }
 
-/* ---------------- HEADER ---------------- */
+
 
 header {
     background-color: #ffffff;
@@ -52,7 +52,7 @@ header {
     text-decoration: underline;
 }
 
-/* ---------------- MAIN ---------------- */
+
 
 main {
     width: 70%;
@@ -76,7 +76,7 @@ main p {
     margin-bottom: 15px;
 }
 
-/* ---------------- FOOTER ---------------- */
+
 
 footer {
     background-color: #2b8a3e;
@@ -121,7 +121,7 @@ footer {
     text-decoration: underline;
 }
 
-/* ---------------- ESPECIALIDADES ---------------- */
+ 
 
 .especialidades-container {
     padding: 40px;
@@ -167,7 +167,7 @@ footer {
     font-weight: bold;
 }
 
-/* ---------------- CONVÊNIOS (NOVO) ---------------- */
+
 
 .convenios-container {
     padding: 40px;
@@ -212,7 +212,7 @@ footer {
     font-weight: 600;
 }
 
-/* ---------------- ALERTAS ---------------- */
+
 
 .alert {
     padding: 12px 20px;
@@ -287,7 +287,7 @@ footer {
     text-decoration: underline;
 }
 
-/* ---------------- RESPONSIVIDADE ---------------- */
+
 
 @media (max-width: 900px) {
     .especialidades-grid,
@@ -312,7 +312,7 @@ footer {
     }
 }
 
-/* ---------------- CARDS ---------------- */
+
 
 .card {
     border-radius: 15px;
@@ -323,4 +323,37 @@ footer {
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.btn-confirmar {
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: #28a745; /* verde */
+    color: #ffffff !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn-confirmar:hover {
+    background-color: #218838;
+}
+
+.btn-cancelar {
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: #dc3545; /* vermelho */
+    color: #ffffff !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.2s;
+    margin-left: 10px;
+}
+
+.btn-cancelar:hover {
+    background-color: #c82333;
 }

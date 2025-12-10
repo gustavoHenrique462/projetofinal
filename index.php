@@ -1,7 +1,4 @@
 <?php
-// Arquivo principal do sistema
-
-// Se existir 'page', carrega a página correspondente
 $page = isset($_GET['page']) ? $_GET['page'] : null;
 
 ?>
@@ -14,7 +11,7 @@ $page = isset($_GET['page']) ? $_GET['page'] : null;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema Hospitalar</title>
 
-    <!-- Fonts + CSS -->
+   
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -26,13 +23,13 @@ $page = isset($_GET['page']) ? $_GET['page'] : null;
 <main>
 
 <?php
-// Controlador de páginas
+
 switch ($page) {
     case "especialidades":
         include("pages/especialidades.php");
         break;
 
-    case "convenios":   // ★★★ NOVA PÁGINA AQUI ★★★
+    case "convenios":   
         include("pages/convenios.php");
         break;
 

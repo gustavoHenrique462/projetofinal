@@ -12,7 +12,7 @@ $id = intval($_GET['id']);
 
 <h2>Tem certeza que deseja excluir este paciente?</h2>
 
-<a href="index.php?page=delete_confirm&id=<?= $id ?>" 
-   class="btn btn-danger">Sim, excluir</a>
+<a href="index.php?page=delete_confirm&id=<?= $id ?>" class="btn-confirmar">Sim, excluir</a>
 
-<a href="index.php?page=listar" class="btn btn-secondary">Cancelar</a>
+<a href="index.php?page=listar" class="btn-cancelar">Cancelar</a>
+

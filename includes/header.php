@@ -1,7 +1,7 @@
 <header>
     <div class="header-top">
         <div class="logo">
-            <h1>HOSPITAL</h1>
+            <h1>HOSPITAL/CAD</h1>
         </div>
 
         <nav class="nav-principal">
