@@ -1,16 +1,14 @@
 <?php
 include("includes/conexao.php");
 
-// ----------------------------------------------------------
-// LIMPAR CNPJ, CPF, RG, TELEFONE
-// ----------------------------------------------------------
+
 function limpar($str) {
     return preg_replace('/\D/', '', $str);
 }
 
-// ----------------------------------------------------------
+
 // RECEBER CAMPOS
-// ----------------------------------------------------------
+
 $acao          = $_POST["acao"] ?? "";
 $id            = $_POST["id"] ?? null;
 $nome          = trim($_POST["nome"] ?? "");
@@ -22,9 +20,6 @@ $cartao_sus    = limpar($_POST["cartao_sus"] ?? "");
 $senhaDigitada = trim($_POST["senha"] ?? "");
 
 
-// ----------------------------------------------------------
-// 1️⃣ VALIDAÇÃO DE CAMPOS (SEM CPF!)
-// ----------------------------------------------------------
 if ($acao == "cadastrar") {
 
     if (
@@ -48,18 +43,6 @@ if ($acao == "cadastrar") {
 }
 
 
-// ----------------------------------------------------------
-// 2️⃣ REMOVIDO: NÃO VALIDAR CPF
-// ----------------------------------------------------------
-// ❌ Nada aqui :)
-// Agora qualquer CPF passa sem bloquear o cadastro.
-
-
-// ----------------------------------------------------------
-// 3️⃣ VERIFICA DUPLICIDADE PARA CADASTRO
-// ----------------------------------------------------------
-// ⚠️ Se quiser permitir CPFs repetidos, me avise.
-// Por enquanto deixei ativo para RG e SUS, mas CPF NÃO trava mais.
 
 if ($acao == "cadastrar") {
 
@@ -78,9 +61,6 @@ if ($acao == "cadastrar") {
 }
 
 
-// ----------------------------------------------------------
-// 4️⃣ Verificar duplicidade na edição
-// ----------------------------------------------------------
 if ($acao == "editar") {
 
     $sql = $conn->prepare("
@@ -100,9 +80,6 @@ if ($acao == "editar") {
 }
 
 
-// ----------------------------------------------------------
-// 5️⃣ DEFINIR SENHA FINAL
-// ----------------------------------------------------------
 if ($acao == "cadastrar") {
 
     $senhaHash = password_hash($senhaDigitada, PASSWORD_DEFAULT);
@@ -122,9 +99,6 @@ if ($acao == "cadastrar") {
 }
 
 
-// ----------------------------------------------------------
-// 6️⃣ SALVAR NO BANCO
-// ----------------------------------------------------------
 
 // CADASTRAR
 if ($acao == "cadastrar") {
